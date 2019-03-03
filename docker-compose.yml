@@ -1,9 +1,26 @@
 version: '2'
 services:
-  loopback:
-    image: aamservices/pm2-sails
+  mongo:
+    image: mongo
+    hostname: mongo
+    restart: unless-stopped
+    networks:
+      - internal
+    volumes:
+      - mongodb_data:/data/db
+  sails:
+    image: aamservices/pm2-sails:caviar
     restart: unless-stopped
     volumes:
-      - loopback:/usr/src/app
+      - sails_data:/usr/src/app
+    networks:
+      - internal
     ports:
       - 1337
+    depends_on:
+      - mongo
+volumes:
+  mongodb_data:
+    driver: local
+  sails_data:
+    driver: local

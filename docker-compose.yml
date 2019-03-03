@@ -1,0 +1,9 @@
+version: '2'
+services:
+  loopback:
+    image: aamservices/pm2-sails
+    restart: unless-stopped
+    volumes:
+      - loopback:/usr/src/app
+    ports:
+      - 1337

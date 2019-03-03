@@ -5,7 +5,7 @@ WORKDIR /usr/src/app
 
 RUN curl -fsSL "https://raw.githubusercontent.com/aam-git/docker-pm2-sails/master/ecosystem.config.js" -o ecosystem.config.js && \
     npm i -g sails browserify && \
-    sails new sails-app
+    sails new sailsApp
 
 EXPOSE 3000
 

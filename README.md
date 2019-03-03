@@ -25,7 +25,7 @@ Available tags you can use in docker compose (default minimal): master, minimal 
 ## docker-compose.yml
 
 ```yaml
-version: '2.0'
+version: '2'
 services:
   mongo:
     image: mongo

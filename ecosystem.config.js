@@ -2,7 +2,7 @@
      apps: [
        {
          name: 'sails',
-         cwd: '/usr/src/app/sails-app/',
+         cwd: '/usr/src/app/sailsApp/',
          script: 'app.js',
          instances: 1,
          autorestart: true,
